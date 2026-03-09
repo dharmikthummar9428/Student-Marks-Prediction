@@ -34,9 +34,8 @@ print("Actual Marks:", y_test.values)
 print("Predicted Marks:", y_pred)
 
 # Predict for new data
-hours = [[7.5]]
+hours = pd.DataFrame([[7.5]], columns=["Hours"])
 predicted_marks = model.predict(hours)
-print("Predicted marks for 7.5 study hours:", predicted_marks[0])
 
 # Visualization
 plt.scatter(X, y, color="blue", label="Actual Data")
@@ -45,4 +44,5 @@ plt.xlabel("Study Hours")
 plt.ylabel("Marks")
 plt.title("Student Marks Prediction")
 plt.legend()
+
 plt.show()
